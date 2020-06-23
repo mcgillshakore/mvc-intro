@@ -1,0 +1,7 @@
+
+<% @airlines.each do |airline| %>
+    <%if airline.name != nil%>
+    <a href="/get-airline/<%=airline.id%>"><%= airline.name %></a>
+    <% end %>
+<% end %>
+

@@ -1,0 +1,11 @@
+<h1><%=@airline.name%></h1>
+<ul>
+<%@airline.tickets.each do |ticket|%>
+    <li><%=ticket.departure_city%>-<%=ticket.destination_city%></li>
+    <% end %>
+</ul>
+<form method="post" action="/remove-airline/<%= @airline.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Remove Airline" >
+</form>
+
